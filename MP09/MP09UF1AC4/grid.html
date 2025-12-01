@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0f0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            gap: 10px;
+            background-color: #000;
+        }
+
+        .item {
+            background-color: #1a1a1a;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            border-color: #0f0;
+            transform: scale(1.02);
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .item2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .item3 {
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+        }
+
+        .item4 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .item5 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .item6 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .item7 {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+        }
+
+        .item8 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 5;
+        }
+
+        .item9 {
+            grid-column: 2 / 3;
+            grid-row: 3 / 5;
+        }
+
+        .placeholder {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="grid-layout">
+            <div class="item item1">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/8/4/1279ac0affdc2329486eb64cd8c98d98/93948_medium-standard.jpg?2025-08-1407:55:25" alt="Imatge 1">
+            </div>
+            <div class="item item2">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/4/3/8801dbd5edfadbabba32dbb8fbb5b75e/93934_medium-standard.jpg?2025-08-1314:12:54" alt="Imatge 2">
+            </div>
+            <div class="item item3">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/1/5/16260347d521a6d3bbbb0471043d7c78/93951_medium-standard.jpg?2025-08-1314:59:06" alt="Imatge 3">
+            </div>
+            <div class="item item4">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/9/2/2bf8c1bc93e827b72f1a422543a7b4cd/93929_medium-standard.jpg?2025-08-1314:12:13" alt="Imatge 4">
+            </div>
+            <div class="item item5">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/6/4/27eaeef4d7c056e96ee4b7d8c8359032/14146_medium-standard.jpg?2016-03-1615:54:23" alt="Imatge 5">
+            </div>
+            <div class="item item6">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/0/4/bcf4716d70e8c634dbcf4793bced6681/48340_medium-standard.jpg?2020-04-0813:46:42" alt="Imatge 6">
+            </div>
+            <div class="item item7">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/8/5/f3b4c86b174977639a08aa32973546c4/92958_medium-standard.jpg?2025-05-2110:07:46" alt="Imatge 7">
+            </div>
+            <div class="item item8">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/5/8/62622656f75c51055aa61f0cfe795682/72485_medium-standard.jpg?2021-01-2514:19:09" alt="Imatge 8">
+            </div>
+            <div class="item item9">
+                <img src="https://debutart-static-v1.s3.eu-west-1.amazonaws.com/projectitem/2/7/99bd4e56f1c31ef8c45f1979c1dc1bbc/53572_medium-standard.jpg?2018-11-2213:32:29" alt="Imatge 9">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

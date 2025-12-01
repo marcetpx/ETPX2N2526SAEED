@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Windows 8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .start-container {
+            background-color: #2d5016;
+            padding: 30px;
+            border-radius: 0;
+            width: 600px;
+        }
+
+        .start-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .tiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* Tamaños de tiles */
+        .tile-small {
+            width: 142px;
+            height: 142px;
+        }
+
+        .tile-wide {
+            width: 294px;
+            height: 142px;
+        }
+
+        /* Colores de tiles */
+        .tile-blue { background-color: #0078d7; }
+        .tile-purple { background-color: #5c2d91; }
+        .tile-darkblue { background-color: #00188f; }
+        .tile-green { background-color: #00a300; }
+        .tile-orange { background-color: #e74856; }
+        .tile-teal { background-color: #008272; }
+        .tile-darkpurple { background-color: #881798; }
+        .tile-red { background-color: #c50f1f; }
+        .tile-darkorange { background-color: #ff8c00; }
+        .tile-lightblue { background-color: #0099bc; }
+        .tile-yellow { background-color: #ffc83d; }
+        .tile-pink { background-color: #e3008c; }
+
+        /* Imagen para tile de ejemplo */
+        .tile-image {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tile-grass {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                              url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%2340831a" width="100" height="100"/></svg>');
+        }
+    </style>
+</head>
+<body>
+    <div class="start-container">
+        <div class="start-title">Start</div>
+        <div class="tiles-container">
+            <!-- Fila 1 -->
+            <div class="tile tile-small tile-blue">📧</div>
+            <div class="tile tile-small tile-purple">📅</div>
+            <div class="tile tile-small tile-darkblue">🌐</div>
+            <div class="tile tile-small tile-green">💼</div>
+            
+            <!-- Fila 2 -->
+            <div class="tile tile-small tile-orange">👥</div>
+            <div class="tile tile-small tile-teal">📊</div>
+            <div class="tile tile-small tile-purple">💬</div>
+            <div class="tile tile-small tile-lightblue">☁️</div>
+            
+            <!-- Fila 3 -->
+            <div class="tile tile-small tile-darkpurple">🎵</div>
+            <div class="tile tile-small tile-red">📹</div>
+            <div class="tile tile-small tile-darkorange">🎧</div>
+            <div class="tile tile-small tile-darkorange">🎮</div>
+            
+            <!-- Fila 4 -->
+            <div class="tile tile-wide tile-grass">🌿</div>
+            <div class="tile tile-small tile-lightblue">☀️</div>
+            <div class="tile tile-small tile-yellow">🎮</div>
+            <div class="tile tile-small tile-pink">📷</div>
+        </div>
+    </div>
+</body>
+</html>

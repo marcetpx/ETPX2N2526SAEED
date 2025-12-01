@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primer formulario HTML</title>
+</head>
+
+<body>
+    <a href="Estructura.html">XTECs</a>
+    <h1>Mi primer formulario HTML</h1>
+    <form>
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" maxlength="20" placeholder="Nom" required autofocus>
+        <br><br>
+
+
+        <label for="cognoms">Cognoms:</label>
+        <input type="text" id="cognoms" name="cognoms" maxlength="50" placeholder="Cognoms" required>
+        <br><br>
+
+
+        <label for="dni">Document d’identitat:</label>
+        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]|[XYZ][0-9]{7}[A-Za-z]" placeholder="DNI o NIE"
+            required>
+        <br><br>
+
+
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat" min="0" max="100" placeholder="Edat">
+        <br><br>
+
+
+        <label for="data">Data de naixement:</label>
+        <input type="date" id="data" name="data" placeholder="Data de naixement">
+        <br><br>
+
+
+        <label for="correu">Correu electrònic:</label>
+        <input type="email" id="correu" name="correu" placeholder="correu@exemple.com">
+        <br><br>
+
+
+        <label for="contrasenya">Contrasenya:</label>
+        <input type="password" id="contrasenya" name="contrasenya" placeholder="Contrasenya" required>
+        <br><br>
+
+
+        <label for="fotografia">Fotografia del DNI:</label>
+        <input type="file" id="fotografia" name="fotografia" accept="image/*" multiple>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

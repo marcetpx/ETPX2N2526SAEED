@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Catálogo de imágenes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 5px 5px 0 0;
+            font-size: 18px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .row-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .image-item {
+            flex: 1;
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para avatares de ejemplo */
+        .avatar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .avatar1 { background: linear-gradient(135deg, #FFB6C1, #FFA07A); }
+        .avatar2 { background: linear-gradient(135deg, #DDA0DD, #BA55D3); }
+        .avatar3 { background: linear-gradient(135deg, #87CEEB, #4682B4); }
+        .avatar4 { background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .avatar5 { background: linear-gradient(135deg, #98FB98, #90EE90); }
+        .avatar6 { background: linear-gradient(135deg, #F0E68C, #EEE8AA); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flexbox - Catálogo de imágenes</h1>
+        
+        <div class="row-label">flex-wrap: nowrap</div>
+        <div class="row">
+            <div class="image-item">
+                <div class="avatar avatar1">👨</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar2">👩</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar3">👨‍🦱</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar4">👩‍🦰</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar5">👩‍🦳</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar6">👨‍🦲</div>
+            </div>
+        </div>
+
+        <div class="row-label">flex-wrap: wrap</div>
+        <div class="row" style="flex-wrap: wrap;">
+            <div class="image-item">
+                <div class="avatar avatar1">👨</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar2">👩</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar3">👨‍🦱</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar4">👩‍🦰</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar5">👩‍🦳</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar6">👨‍🦲</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar1">👨</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar2">👩</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar3">👨‍🦱</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar4">👩‍🦰</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar5">👩‍🦳</div>
+            </div>
+            <div class="image-item">
+                <div class="avatar avatar6">👨‍🦲</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
